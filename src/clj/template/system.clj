@@ -183,6 +183,7 @@
                  (fn [ring-req]
                    (let [client-id (get-in ring-req [:params :client-id])
                          known? (sph/get-value (get-in system [:sophia :db]) "state" client-id)]
+                     (println "Request:"(str ring-req))
                      (println "Client connecting.." client-id)
                      (when-not known? 
                        (do
