@@ -1,12 +1,12 @@
 (ns template.app
   (:require 
     [reagent.core :as r]
-    [template.api :as api]
+    [brave.cmc :as api]
     [bide.core :as b]))
 
 (enable-console-print!)
 
-(def app-state (api/init {:apikey "test"}))
+(def app-state (api/init {:apikey "test" :host "95.217.155.168:7000" :protocol :http :reagent? true}))
 
 (defn home-page [app-state]
   [:div "Home 2"
