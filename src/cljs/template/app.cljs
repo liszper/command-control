@@ -6,7 +6,8 @@
 
 (enable-console-print!)
 
-(def app-state (api/init {:apikey "test" :host "95.217.155.168:7000" :protocol :http :reagent? true}))
+(def app-state (api/init {:apikey "test" ;:host "95.217.155.168:7000"
+                          :protocol :https :reagent? true}))
 
 (defn home-page [app-state]
   [:div "Home 2"
